@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.2.0">
+  <Workflow xmlns:q1="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q2="clr-namespace:Bonsai.Scripting;assembly=Bonsai.Scripting" xmlns:q3="clr-namespace:Bonsai.IO;assembly=Bonsai.System" xmlns="https://horizongir.org/bonsai">
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:FileCapture">
+          <q1:FileName>..\front_video.avi</q1:FileName>
+          <q1:PlaybackRate>-1</q1:PlaybackRate>
+          <q1:StartPosition>0</q1:StartPosition>
+          <q1:PositionUnits>Frames</q1:PositionUnits>
+          <q1:Loop>false</q1:Loop>
+          <q1:Playing>true</q1:Playing>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:RoiActivity">
+          <q1:Regions>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>8</q1:X>
+                <q1:Y>101</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>51</q1:X>
+                <q1:Y>96</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>132</q1:X>
+                <q1:Y>92</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>132</q1:X>
+                <q1:Y>99</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>58</q1:X>
+                <q1:Y>107</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>7</q1:X>
+                <q1:Y>108</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>223</q1:X>
+                <q1:Y>95</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>276</q1:X>
+                <q1:Y>95</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>249</q1:X>
+                <q1:Y>102</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>218</q1:X>
+                <q1:Y>109</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>166</q1:X>
+                <q1:Y>109</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>378</q1:X>
+                <q1:Y>96</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>426</q1:X>
+                <q1:Y>96</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>393</q1:X>
+                <q1:Y>110</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>337</q1:X>
+                <q1:Y>110</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>533</q1:X>
+                <q1:Y>95</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>576</q1:X>
+                <q1:Y>95</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>567</q1:X>
+                <q1:Y>108</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>511</q1:X>
+                <q1:Y>108</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>677</q1:X>
+                <q1:Y>95</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>720</q1:X>
+                <q1:Y>94</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>747</q1:X>
+                <q1:Y>106</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>689</q1:X>
+                <q1:Y>107</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>832</q1:X>
+                <q1:Y>94</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>877</q1:X>
+                <q1:Y>93</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>921</q1:X>
+                <q1:Y>104</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>868</q1:X>
+                <q1:Y>105</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>981</q1:X>
+                <q1:Y>89</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1027</q1:X>
+                <q1:Y>89</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1088</q1:X>
+                <q1:Y>102</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1035</q1:X>
+                <q1:Y>102</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+            <q1:ArrayOfPoint>
+              <q1:Point>
+                <q1:X>1121</q1:X>
+                <q1:Y>90</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1121</q1:X>
+                <q1:Y>82</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1159</q1:X>
+                <q1:Y>82</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1242</q1:X>
+                <q1:Y>88</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1242</q1:X>
+                <q1:Y>97</q1:Y>
+              </q1:Point>
+              <q1:Point>
+                <q1:X>1193</q1:X>
+                <q1:Y>98</q1:Y>
+              </q1:Point>
+            </q1:ArrayOfPoint>
+          </q1:Regions>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:FindContours">
+          <q1:Mode>External</q1:Mode>
+          <q1:Method>ChainApproxNone</q1:Method>
+          <q1:Offset>
+            <q1:X>0</q1:X>
+            <q1:Y>0</q1:Y>
+          </q1:Offset>
+          <q1:MinArea>1000</q1:MinArea>
+          <q1:MaxArea xsi:nil="true" />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:BinaryRegionAnalysis" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:Crop">
+          <q1:RegionOfInterest>
+            <q1:X>0</q1:X>
+            <q1:Y>0</q1:Y>
+            <q1:Width>1280</q1:Width>
+            <q1:Height>560</q1:Height>
+          </q1:RegionOfInterest>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:Smooth">
+          <q1:SmoothType>Gaussian</q1:SmoothType>
+          <q1:Size1>7</q1:Size1>
+          <q1:Size2>0</q1:Size2>
+          <q1:Sigma1>2</q1:Sigma1>
+          <q1:Sigma2>0</q1:Sigma2>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:AdaptiveThreshold">
+          <q1:MaxValue>255</q1:MaxValue>
+          <q1:AdaptiveMethod>MeanC</q1:AdaptiveMethod>
+          <q1:ThresholdType>Binary</q1:ThresholdType>
+          <q1:BlockSize>255</q1:BlockSize>
+          <q1:Parameter>-10</q1:Parameter>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:MorphologicalOperator">
+          <q1:Size>
+            <q1:Width>3</q1:Width>
+            <q1:Height>3</q1:Height>
+          </q1:Size>
+          <q1:Anchor>
+            <q1:X>1</q1:X>
+            <q1:Y>1</q1:Y>
+          </q1:Anchor>
+          <q1:Shape>Rectangle</q1:Shape>
+          <q1:Iterations>7</q1:Iterations>
+          <q1:Operation>Erode</q1:Operation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="NestedWorkflow">
+        <Name>SplitCrossings</Name>
+        <Description>Splits a stream of particles into crossing sections with boundaries defined where no particles exist.</Description>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="TriggeredWindow">
+                <Count xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Condition">
+              <Name>Empty</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="Equal">
+                    <Operand xsi:type="IntProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Source.Count</Selector>
+                  </Expression>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge>
+                    <From>0</From>
+                    <To>3</To>
+                    <Label>Source1</Label>
+                  </Edge>
+                  <Edge>
+                    <From>1</From>
+                    <To>0</To>
+                    <Label>Source1</Label>
+                  </Edge>
+                  <Edge>
+                    <From>2</From>
+                    <To>1</To>
+                    <Label>Source1</Label>
+                  </Edge>
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge>
+              <From>0</From>
+              <To>3</To>
+              <Label>Source1</Label>
+            </Edge>
+            <Edge>
+              <From>1</From>
+              <To>0</To>
+              <Label>Source2</Label>
+            </Edge>
+            <Edge>
+              <From>2</From>
+              <To>0</To>
+              <Label>Source1</Label>
+            </Edge>
+            <Edge>
+              <From>2</From>
+              <To>1</To>
+              <Label>Source1</Label>
+            </Edge>
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="SelectMany">
+        <Name>TrackFrontmost</Name>
+        <Description>Tracks the frontmost particle for each crossing, where "front" is specified by where the object first entered the field of view.</Description>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="q2:PythonTransform">
+              <q2:Script>import clr
+clr.AddReference("OpenCV.Net")
+from OpenCV.Net import *
+from System import Array, Tuple
+
+direction = None
+
+def load():
+  global direction
+  previous = None
+  direction = None
+  failed = False
+
+def ensuredirection(component):
+  global direction
+  if direction is None:
+    if component.Centroid.X &gt; 640:
+      direction = 0
+    else:
+      direction = 1
+
+def isfrontmost(point, cache):
+  if cache is None:
+    return True
+  elif direction == 0:
+    # We want the leftmost point
+    return point.X &lt; cache.X
+  else:
+    # We want the rightmost point
+    return point.X &gt; cache.X
+
+@returns(Tuple[Point2f, float])
+def process(value):
+  area = 0.0
+  output = None
+  for component in value:
+    ensuredirection(component)
+    if isfrontmost(component.Centroid, output):
+      output = component.Centroid
+      area = component.Area
+
+  if output is None:
+    output = Point2f(float.NaN, float.NaN)
+  return Tuple.Create(output, area)</q2:Script>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge>
+              <From>0</From>
+              <To>2</To>
+              <Label>Source1</Label>
+            </Edge>
+            <Edge>
+              <From>2</From>
+              <To>1</To>
+              <Label>Source1</Label>
+            </Edge>
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:Crop">
+          <q1:RegionOfInterest>
+            <q1:X>10</q1:X>
+            <q1:Y>467</q1:Y>
+            <q1:Width>1259</q1:Width>
+            <q1:Height>213</q1:Height>
+          </q1:RegionOfInterest>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="q2:ExpressionTransform">
+        <q2:Expression>new(it[0].Activity.Val0 as stepactivity0,it[1].Activity.Val0 as stepactivity1,it[2].Activity.Val0 as stepactivity2,it[3].Activity.Val0 as stepactivity3,it[4].Activity.Val0 as stepactivity4,it[5].Activity.Val0 as stepactivity5,it[6].Activity.Val0 as stepactivity6,it[7].Activity.Val0 as stepactivity7)</q2:Expression>
+      </Expression>
+      <Expression xsi:type="q3:CsvWriter">
+        <q3:FileName>trajectories.csv</q3:FileName>
+        <q3:Append>false</q3:Append>
+        <q3:Overwrite>false</q3:Overwrite>
+        <q3:Suffix>None</q3:Suffix>
+        <q3:IncludeHeader>true</q3:IncludeHeader>
+      </Expression>
+      <Expression xsi:type="q3:CsvWriter">
+        <q3:FileName>step_activity.csv</q3:FileName>
+        <q3:Append>false</q3:Append>
+        <q3:Overwrite>false</q3:Overwrite>
+        <q3:Suffix>None</q3:Suffix>
+        <q3:IncludeHeader>true</q3:IncludeHeader>
+      </Expression>
+      <Expression xsi:type="q2:ExpressionTransform">
+        <q2:Expression>new(Item1.X as xhead,Item1.Y as yhead,Item2 as area)</q2:Expression>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge>
+        <From>0</From>
+        <To>6</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>1</From>
+        <To>11</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>2</From>
+        <To>3</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>3</From>
+        <To>8</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>4</From>
+        <To>7</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>5</From>
+        <To>2</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>6</From>
+        <To>4</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>6</From>
+        <To>10</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>7</From>
+        <To>5</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>8</From>
+        <To>9</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>9</From>
+        <To>14</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>10</From>
+        <To>1</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>11</From>
+        <To>13</To>
+        <Label>Source1</Label>
+      </Edge>
+      <Edge>
+        <From>14</From>
+        <To>12</To>
+        <Label>Source1</Label>
+      </Edge>
+    </Edges>
+  </Workflow>
+  <ExtensionTypes>
+    <Type>Bonsai.Vision.FileCapture, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.RoiActivity, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.FindContours, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.BinaryRegionAnalysis, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Crop, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Smooth, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.AdaptiveThreshold, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.MorphologicalOperator, Bonsai.Vision, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Reactive.TriggeredWindow, Bonsai.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Expressions.EqualBuilder, Bonsai.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Expressions.IntProperty, Bonsai.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Scripting.PythonTransform, Bonsai.Scripting, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Scripting.ExpressionTransform, Bonsai.Scripting, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.IO.CsvWriter, Bonsai.System, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null</Type>
+  </ExtensionTypes>
+</WorkflowBuilder>
