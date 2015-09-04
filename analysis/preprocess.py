@@ -281,6 +281,28 @@ def createdataset(session,path,overwrite=False):
                   for i in xrange(1,7)]
     trialseries = appendtrialinfo(fronttime,rewards,stepstates)
     
+    # Compute ephys sample indices
+    syncpath = os.path.join(path, 'sync.bin')
+    counterpath = os.path.join(path, 'front_counter.csv')
+    sync = np.fromfile(syncpath,dtype=np.uint8)
+    syncidx = np.nonzero(np.diff(np.int8(sync > 0)) < 0)[0]
+    counter = pd.read_csv(counterpath,names=['counter'])
+    drops = counter.diff() - 1
+    if len(syncidx) != (len(counter) + drops.sum()[0]):
+        print "WARNING: Number of frames does not match number of sync pulses!"
+    matchedpulses = drops.counter.fillna(0).cumsum() + np.arange(len(drops))
+    syncidx = syncidx[matchedpulses.astype(np.int32).values]
+    syncidx = pd.DataFrame(syncidx,columns=['syncidx'])
+    syncidx = indexseries(syncidx,fronttime)
+    
+    # Compute load cell activation
+    adcpath = os.path.join(path, 'adc.bin')
+    adc = np.memmap(adcpath,dtype=np.uint16).reshape((-1,8))
+    loadactivity = pd.DataFrame(adc[syncidx.values.ravel(),:],
+                                columns=[str.format('loadactivity{0}',i)
+                                for i in xrange(8)])
+    loadactivity = indexseries(loadactivity,fronttime)
+    
     # Generate session info
     starttime = fronttime[0].replace(second=0, microsecond=0)
     dirname = os.path.basename(path)
@@ -329,7 +351,9 @@ def createdataset(session,path,overwrite=False):
                                trialseries,
                                trajectories,
                                speed,
-                               stepactivity],
+                               stepactivity,
+                               loadactivity,
+                               syncidx],
                                axis=1)
     
     fronttime.to_hdf(h5path, fronttime_key)
